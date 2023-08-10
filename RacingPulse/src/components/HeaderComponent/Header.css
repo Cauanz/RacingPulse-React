@@ -1,0 +1,45 @@
+.header {
+   background-color: #fff;
+   border-bottom: 1px solid #eee;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 100;
+   display: grid;
+   grid-template-columns: auto auto;
+   grid-template-rows: auto;
+}
+
+.titleLogo {
+   grid-column-start: 1;
+   grid-column-end: 2;
+}
+
+.NavMenu {
+   grid-column-start: 2;
+   grid-column-end: 3;
+   display: flex;
+}
+
+.logo {
+   display: inline-block;
+   margin: 0;
+   padding: 0;
+   font-size: 1.5rem;
+   font-weight: 700;
+   line-height: 1;
+   text-decoration: none;
+   color: #000;
+}
+
+.title {
+   display: inline-block;
+   margin: 0;
+   padding: 0;
+   font-size: 1.5rem;
+   font-weight: 700;
+   line-height: 1;
+   text-decoration: none;
+   color: #000;
+}
