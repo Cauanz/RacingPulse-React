@@ -14,12 +14,17 @@
 .titleLogo {
    grid-column-start: 1;
    grid-column-end: 2;
+   display: flex;
+   align-items: center;
+   margin-left: 30px;
 }
 
 .NavMenu {
    grid-column-start: 2;
    grid-column-end: 3;
    display: flex;
+   align-items: center;
+   justify-content: flex-end;
 }
 
 .logo {
@@ -33,6 +38,11 @@
    color: #000;
 }
 
+.logo img {
+   width: 100px;
+   height: 100px;
+}
+
 .title {
    display: inline-block;
    margin: 0;
@@ -43,3 +53,53 @@
    text-decoration: none;
    color: #000;
 }
+
+.NavMenu > .MuiButton-root{
+   color: red;
+   font-weight: bold;
+   font-size: 1.2rem;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.NavMenu > .MuiButton-root:hover {
+   background-color: #FF4500;
+   color: #fff;
+}
+
+.signatureButton {
+   margin-left: 20px;
+}
+
+.signatureButton > .MuiButton-root{
+   background-color: #FF4500;
+   color: #fff;
+      font-weight: bold;
+   font-size: 1.2rem;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.signatureButton > .MuiButton-root:hover {
+   background-color: #FF4500;
+   color: #fff;
+}
+
+.AvatarButton{
+   margin-left: 20px;
+   margin-right: 20px;
+   width: 50px;
+   height: 50px;
+}
+/* 
+.AvatarButton .MuiButtonBase-root{
+   width: 43px;
+   height: 42px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+   border: 2px solid #000;
+}
+
+.AvatarButton button:active {
+   border: 2px solid #FF4500;
+} */
