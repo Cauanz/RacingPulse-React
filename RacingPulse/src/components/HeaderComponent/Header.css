@@ -68,6 +68,10 @@
 
 .signatureButton {
    margin-left: 20px;
+   width: 110px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .signatureButton > .MuiButton-root{
@@ -83,23 +87,29 @@
    color: #fff;
 }
 
-.AvatarButton{
+.signatureButton > .MuiButton-root:active {
+   background-color: #ffffff;
+   color: #FF4500;
+   border: 1px solid #FF4500;
+}
+
+.AvatarContainer{
    margin-left: 20px;
    margin-right: 20px;
    width: 50px;
    height: 50px;
 }
-/* 
-.AvatarButton .MuiButtonBase-root{
-   width: 43px;
+
+.AvatarContainer .MuiButton-root{
+   width: 42px;
    height: 42px;
+   border-radius: 30px;
    display: flex;
    justify-content: center;
    align-items: center;
-   border-radius: 50%;
    border: 2px solid #000;
 }
 
-.AvatarButton button:active {
+.AvatarContainer .MuiButton-root:active {
    border: 2px solid #FF4500;
-} */
+}

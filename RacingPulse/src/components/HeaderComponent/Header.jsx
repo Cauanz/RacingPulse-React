@@ -10,6 +10,8 @@ function Header() {
 
    const [anchorElCalendario, setAnchorElCalendario] = useState(null);
    const [anchorElCategorias, setAnchorElCategorias] = useState(null);
+   const [anchorElAvatar, setAnchorElAvatar] = useState(null);
+
 
 
    const handleClickCategorias = (event) => {
@@ -28,14 +30,13 @@ function Header() {
       setAnchorElCalendario(null);
    };
 
-   const styles = {
-      avatarButton: {
-        width: '43px',
-        height: '42px',
-        borderRadius: '50%',
-        border: '2px solid #000',
-      },
-    };
+   const handleClickAvatar = (event) => {
+      setAnchorElAvatar(event.currentTarget);
+   };
+   
+   const handleCloseAvatar = () => {
+      setAnchorElAvatar(null);
+   };
 
     return (
         <div className="header">
@@ -108,19 +109,34 @@ function Header() {
                </Menu>
 
                <div className='signatureButton'>
-                  <Button>
+                  <Button disableRipple disableFocusRipple>
                      Assinar
                   </Button>
                </div>
 
-               <div className="AvatarButton">
-{/*                   <button>
-                     <Avatar alt="Remy Sharp" src="./1.png" />
-                  </button> */}
+               <div className="AvatarContainer">
+               <Button
+               variant="outlined" 
+               sx={{ minWidth: "42px" }}
+               aria-controls={open ? 'AvatarMenu' : undefined}
+               aria-haspopup="true"
+               aria-expanded={open ? 'true' : undefined}
+               onClick={handleClickAvatar}
+               >
+                  <Avatar />
+               </Button>
 
-                  <Button style={styles.avatarButton}>
-                     <Avatar alt="Remy Sharp" src="./1.png" />
-                  </Button>
+               <Menu
+                  id="AvatarMenu"
+                  anchorEl={anchorElAvatar}
+                  open={Boolean(anchorElAvatar)}
+                  onClose={handleCloseAvatar}
+                  MenuListProps={{'aria-labelledby': 'AvatarButton',}}
+               >
+               <MenuItem onClick={handleCloseAvatar}>F1</MenuItem>
+               <MenuItem onClick={handleCloseAvatar}>NASCAR</MenuItem>
+               <MenuItem onClick={handleCloseAvatar}>GT3</MenuItem>
+               </Menu>
                </div>
             </div>
         </div>
