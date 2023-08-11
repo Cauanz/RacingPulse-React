@@ -4,6 +4,8 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Avatar from '@mui/material/Avatar';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useState } from 'react';
 
 function Header() {
@@ -59,14 +61,13 @@ function Header() {
 
                <Button
                   id="CategoriasButton"
-                  onMouseDown={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
                   aria-controls={open ? 'categoriasMenu' : undefined}
                   aria-haspopup="true"
                   aria-expanded={open ? 'true' : undefined}
                   onClick={handleClickCategorias}
                   >
                      Categorias
+                     {anchorElCategorias ? <ExpandLessIcon /> : <ExpandMoreIcon />}
                </Button>
 
                <Menu
@@ -87,14 +88,13 @@ function Header() {
 
                <Button
                   id="CalendarioButton"
-                  onMouseDown={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-                  onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
                   aria-controls={open ? 'CalendarioMenu' : undefined}
                   aria-haspopup="true"
                   aria-expanded={open ? 'true' : undefined}
                   onClick={handleClickCalendario}
                   >
                      Calendários
+                     {anchorElCategorias ? <ExpandLessIcon /> : <ExpandMoreIcon />}
                </Button>
                <Menu
                   id="CalendarioMenu"

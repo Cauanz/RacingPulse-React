@@ -9,6 +9,7 @@
    display: grid;
    grid-template-columns: auto auto;
    grid-template-rows: auto;
+   height: 100px;
 }
 
 .titleLogo {
@@ -36,6 +37,7 @@
    line-height: 1;
    text-decoration: none;
    color: #000;
+   height: 100px;
 }
 
 .logo img {
