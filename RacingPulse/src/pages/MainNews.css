@@ -1,0 +1,8 @@
+
+
+.MainNewsContainer {
+   min-width: 100%;
+   min-height: 30%;
+   display: grid;
+   background: red;
+}

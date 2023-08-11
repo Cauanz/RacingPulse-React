@@ -4,3 +4,9 @@
       box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
 }
+
+.Container {
+      width: 100vw;
+      height: 100vh;
+      padding: 60px;
+}
