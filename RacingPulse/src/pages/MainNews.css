@@ -6,17 +6,35 @@
    display: grid;
    margin-top: 100px;
    background: red;
-   grid-template-columns: 1fr 1fr;
+   grid-template-columns: 1fr 2fr;
+   grid-template-rows: 1fr 1fr 1fr;
    grid-gap: 20px;
    padding: 20px;
    grid-template-areas: "LeftContainer RightTopContainer" 
-                        "LeftContainer RightMidContainer" 
+                        "LeftContainer RightBottomContainer" 
                         "LeftContainer RightBottomContainer";
 }
 
 .LeftContainer {
    grid-area: LeftContainer;
    background-color: #8d1e7e;
+   width: 100%;
+   height: 100%;
+}
+
+.carousel {
+   height: 100%;
+   width: 100%;
+   border: 1px solid #ccc;
+}
+
+.news-card {
+   padding: 20px;
+}
+
+.news-card img {
+   max-width: 100%;
+   height: auto;
 }
 
 .RightTopContainer {
@@ -38,11 +56,6 @@
 .RightTopRightContainer {
    width: 50%;
    background-color: #e2b215;
-}
-
-.RightMidContainer{
-   grid-area: RightMidContainer;
-   background-color: #bde215;
 }
 
 .RightBottomContainer{
