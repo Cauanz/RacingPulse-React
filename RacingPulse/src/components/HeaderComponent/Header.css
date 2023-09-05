@@ -119,3 +119,7 @@
 .AvatarContainer .MuiButton-root:active {
    border: 2px solid #FF4500;
 }
+
+.AvatarContainer img {
+   width: 40px;
+}

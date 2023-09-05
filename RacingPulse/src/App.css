@@ -8,5 +8,6 @@
 .Container {
       width: 100vw;
       height: 100vh;
-      padding: 70px;
+      max-width: 100%;
+      display: flex;
 }

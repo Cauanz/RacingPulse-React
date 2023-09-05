@@ -6,38 +6,46 @@ import MenuItem from '@mui/material/MenuItem';
 import Avatar from '@mui/material/Avatar';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { useState } from 'react';
+import ButtonGroup from '@mui/material/ButtonGroup';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import Tooltip from '@mui/material/Tooltip';
+import Box from '@mui/material/Box';
+import IconButton from '@mui/material/IconButton';
+import Divider from '@mui/material/Divider';
+import Settings from '@mui/icons-material/Settings';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+import Logout from '@mui/icons-material/Logout';
+import { useState, useNavigate } from 'react';
 
 function Header() {
 
-   const [anchorElCalendario, setAnchorElCalendario] = useState(null);
-   const [anchorElCategorias, setAnchorElCategorias] = useState(null);
-   const [anchorElAvatar, setAnchorElAvatar] = useState(null);
+/*    const navigate = useNavigate(); */
 
+   const [anchorEl, setAnchorEl] = useState(null);
+   const open = Boolean(anchorEl);
 
-
-   const handleClickCategorias = (event) => {
-      setAnchorElCategorias(event.currentTarget);
+   const handleClick = (event) => {
+      setAnchorEl(event.currentTarget);
    };
-   
-   const handleCloseCategorias = () => {
-      setAnchorElCategorias(null);
+   const handleClose = () => {
+      setAnchorEl(null);
    };
 
-   const handleClickCalendario = (event) => {
-      setAnchorElCalendario(event.currentTarget);
-   };
-   
-   const handleCloseCalendario = () => {
-      setAnchorElCalendario(null);
-   };
+/*    const logOut = async () => {
+      const auth = getAuth();
+      try {
+      await signOut(auth)
+         .then(() => {
+            console.log('Sign-out successful.')
+            navigate('/SignIn')
+         })
+      } catch (err){
+         console.error(err);
+      }
+   }; */
 
-   const handleClickAvatar = (event) => {
-      setAnchorElAvatar(event.currentTarget);
-   };
-   
-   const handleCloseAvatar = () => {
-      setAnchorElAvatar(null);
+   const handleLogout = () => {
+      logOut();
    };
 
     return (
@@ -59,7 +67,7 @@ function Header() {
 
                {/* Categorias */}
 
-               <Button
+{/*                <Button
                   id="CategoriasButton"
                   aria-controls={open ? 'categoriasMenu' : undefined}
                   aria-haspopup="true"
@@ -82,9 +90,6 @@ function Header() {
                <MenuItem onClick={handleCloseCategorias}>LMP2</MenuItem>
                </Menu>
 
-               {/* Categorias */}
-
-               {/* Calendario */}
 
                <Button
                   id="CalendarioButton"
@@ -106,7 +111,7 @@ function Header() {
                <MenuItem onClick={handleCloseCalendario}>F1</MenuItem>
                <MenuItem onClick={handleCloseCalendario}>NASCAR</MenuItem>
                <MenuItem onClick={handleCloseCalendario}>GT3</MenuItem>
-               </Menu>
+               </Menu> */}
 
                <div className='signatureButton'>
                   <Button disableRipple disableFocusRipple>
@@ -114,29 +119,76 @@ function Header() {
                   </Button>
                </div>
 
-               <div className="AvatarContainer">
-               <Button
-               variant="outlined" 
-               sx={{ minWidth: "42px" }}
-               aria-controls={open ? 'AvatarMenu' : undefined}
-               aria-haspopup="true"
-               aria-expanded={open ? 'true' : undefined}
-               onClick={handleClickAvatar}
-               >
-                  <Avatar />
-               </Button>
 
-               <Menu
-                  id="AvatarMenu"
-                  anchorEl={anchorElAvatar}
-                  open={Boolean(anchorElAvatar)}
-                  onClose={handleCloseAvatar}
-                  MenuListProps={{'aria-labelledby': 'AvatarButton',}}
-               >
-               <MenuItem onClick={handleCloseAvatar}>F1</MenuItem>
-               <MenuItem onClick={handleCloseAvatar}>NASCAR</MenuItem>
-               <MenuItem onClick={handleCloseAvatar}>GT3</MenuItem>
-               </Menu>
+               <div className="AvatarContainer">
+
+               <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
+                        <Tooltip title="Account settings">
+                           <IconButton
+                              onClick={handleClick}
+                              size="small"
+                              sx={{ ml: 2 }}
+                              aria-controls={open ? 'account-menu' : undefined}
+                              aria-haspopup="true"
+                              aria-expanded={open ? 'true' : undefined}
+                           >
+                              <Avatar><img src="./1.jpg" alt="" /></Avatar>
+                           </IconButton>
+                        </Tooltip>
+                     </Box>
+
+                     <Menu
+                     anchorEl={anchorEl}
+                     id="account-menu"
+                     open={open}
+                     onClose={handleClose}
+                     onClick={handleClose}
+                     PaperProps={{
+                        elevation: 0,
+                        sx: {
+                           overflow: 'visible',
+                           filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
+                           mt: 1.5,
+                           '& .MuiAvatar-root': {
+                           width: 32,
+                           height: 32,
+                           ml: -0.5,
+                           mr: 1,
+                           },
+                           '&:before': {
+                           content: '""',
+                           display: 'block',
+                           position: 'absolute',
+                           top: 0,
+                           right: 14,
+                           width: 10,
+                           height: 10,
+                           bgcolor: 'background.paper',
+                           transform: 'translateY(-50%) rotate(45deg)',
+                           zIndex: 0,
+                           },
+                        },
+                     }}
+                     transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+                     anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+                     >
+                        <MenuItem onClick={handleClose}>
+                           <Avatar /> My account
+                        </MenuItem>
+                        <Divider />
+                        <MenuItem onClick={handleClose}>
+                           <ListItemIcon>
+                              <Settings fontSize="small" />
+                           </ListItemIcon>
+                           Settings
+                        </MenuItem>
+                        <MenuItem onClick={handleLogout}>
+                           <ListItemIcon>
+                              <Logout fontSize="small" />
+                           </ListItemIcon>
+                           Logout
+                        </MenuItem>
+                     </Menu>
                </div>
             </div>
         </div>
