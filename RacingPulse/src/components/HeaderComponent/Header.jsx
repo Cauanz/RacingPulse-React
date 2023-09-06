@@ -15,6 +15,8 @@ import Divider from '@mui/material/Divider';
 import Settings from '@mui/icons-material/Settings';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Logout from '@mui/icons-material/Logout';
+
+import { NavLink } from 'react-router-dom';
 import { useState, useNavigate } from 'react';
 
 function Header() {
@@ -61,62 +63,24 @@ function Header() {
 
             <div className="NavMenu">
 
+               <NavLink to="/">
                <Button className='HomeButton'>
                   Home
                </Button>
-
-               {/* Categorias */}
-
-{/*                <Button
-                  id="CategoriasButton"
-                  aria-controls={open ? 'categoriasMenu' : undefined}
-                  aria-haspopup="true"
-                  aria-expanded={open ? 'true' : undefined}
-                  onClick={handleClickCategorias}
-                  >
-                     Categorias
-                     {anchorElCategorias ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-               </Button>
-
-               <Menu
-                  id="categoriasMenu"
-                  anchorEl={anchorElCategorias}
-                  open={Boolean(anchorElCategorias)}
-                  onClose={handleCloseCategorias}
-                  MenuListProps={{'aria-labelledby': 'CategoriasButton',}}
-               >
-               <MenuItem onClick={handleCloseCategorias}>F1</MenuItem>
-               <MenuItem onClick={handleCloseCategorias}>NASCAR</MenuItem>
-               <MenuItem onClick={handleCloseCategorias}>LMP2</MenuItem>
-               </Menu>
-
-
-               <Button
-                  id="CalendarioButton"
-                  aria-controls={open ? 'CalendarioMenu' : undefined}
-                  aria-haspopup="true"
-                  aria-expanded={open ? 'true' : undefined}
-                  onClick={handleClickCalendario}
-                  >
-                     Calendários
-                     {anchorElCategorias ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-               </Button>
-               <Menu
-                  id="CalendarioMenu"
-                  anchorEl={anchorElCalendario}
-                  open={Boolean(anchorElCalendario)}
-                  onClose={handleCloseCalendario}
-                  MenuListProps={{'aria-labelledby': 'CalendarioButton',}}
-               >
-               <MenuItem onClick={handleCloseCalendario}>F1</MenuItem>
-               <MenuItem onClick={handleCloseCalendario}>NASCAR</MenuItem>
-               <MenuItem onClick={handleCloseCalendario}>GT3</MenuItem>
-               </Menu> */}
+               </NavLink>
 
                <div className='signatureButton'>
                   <Button disableRipple disableFocusRipple>
                      Assinar
                   </Button>
+               </div>
+
+               <div className='CreateButton'>
+                  <NavLink to="/CreatePost">
+                     <Button disableRipple>
+                        Criar
+                     </Button>
+                  </NavLink>
                </div>
 
 
