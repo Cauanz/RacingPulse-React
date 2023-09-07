@@ -16,12 +16,13 @@ import Settings from '@mui/icons-material/Settings';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Logout from '@mui/icons-material/Logout';
 
-import { NavLink } from 'react-router-dom';
-import { useState, useNavigate } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { getAuth, signOut } from "firebase/auth";
 
 function Header() {
 
-/*    const navigate = useNavigate(); */
+   const navigate = useNavigate();
 
    const [anchorEl, setAnchorEl] = useState(null);
    const open = Boolean(anchorEl);
@@ -33,7 +34,7 @@ function Header() {
       setAnchorEl(null);
    };
 
-/*    const logOut = async () => {
+   const logOut = async () => {
       const auth = getAuth();
       try {
       await signOut(auth)
@@ -44,7 +45,7 @@ function Header() {
       } catch (err){
          console.error(err);
       }
-   }; */
+   };
 
    const handleLogout = () => {
       logOut();

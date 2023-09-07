@@ -2,7 +2,8 @@ import { useState } from 'react';
 import './Create.css';
 import Header from '../components/HeaderComponent/Header';
 import TextField from '@mui/material/TextField';
-import { firebaseApp } from '../firebaseConfig';
+import { db } from '../components/auth/firebase';
+import { collection, addDoc } from "firebase/firestore";
 
 
 function Create() {
@@ -19,29 +20,27 @@ function Create() {
       setPostagem({ ...postagem, [campo]: value });
    };
 
-   const handleSubmit = (e) => {
+   const handleSubmit = async (e) => {
       e.preventDefault();
-      
-      // Crie uma referência à coleção 'postagens' no Firestore
-      const postagensCollection = firebaseApp.firestore().collection('postagens');
-      
-      // Adicione a postagem ao Firestore e obtenha a referência para o documento criado
-      postagensCollection
-         .add(postagem)
-         .then((docRef) => {
-            console.log('Postagem adicionada com ID: ', docRef.id);
-      
-            // Limpar o formulário ou redirecionar para a página de sucesso, se necessário
-            setPostagem({
-            titulo: '',
-            conteudo: '',
-            autor: '',
-            tags: [],
-            });
-         })
-         .catch((error) => {
-            console.error('Erro ao adicionar postagem: ', error);
+      try {
+         const docRef = await addDoc(collection(db, "postagens"), {
+            titulo: postagem.titulo,
+            conteudo: postagem.conteudo,
+            autor: postagem.autor,
+            tags: postagem.tags,
          });
+
+         setPostagem({
+            titulo: "",
+            conteudo: "",
+            autor: "",
+            tags: [],
+         });
+
+         console.log("Documento adicionado com a ID: ", docRef.id);
+      } catch (e) {
+         console.error("Error adding document: ", e);
+      }
    };
 
 return (

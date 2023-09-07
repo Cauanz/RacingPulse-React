@@ -1,0 +1,9 @@
+.logo-login {
+   width: 70%;
+}
+
+@media screen and (max-width: 400px) {
+   .logo-login {
+      width: 80%;
+   }
+}
