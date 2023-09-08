@@ -43,6 +43,9 @@ function Create() {
       }
    };
 
+
+   /* Draft.js */
+
 return (
    <>
       <Header />

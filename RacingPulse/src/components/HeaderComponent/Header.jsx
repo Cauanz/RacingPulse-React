@@ -40,7 +40,7 @@ function Header() {
       await signOut(auth)
          .then(() => {
             console.log('Sign-out successful.')
-            navigate('/SignIn')
+            navigate('/LogIn')
          })
       } catch (err){
          console.error(err);
