@@ -9,46 +9,22 @@ import Card from '../components/CardPostComponent/Card';
 
 function MainNews() {
 
-   const [posts, setPosts] = useState([]);
-
-   useEffect(() => {
-
-      const getPosts = async () => {
-         try {
-         const querySnapshot = await getDocs(collection(db, 'postagens'));
-         const postArray = [];
-         
-         querySnapshot.forEach((doc) => {
-            postArray.push({ id: doc.id, ...doc.data() });
-         });
-
-         console.log(postArray);
-         setPosts(postArray);
-         } catch (error) {
-         console.error('Erro ao buscar posts:', error);
-         }
-      };
-
-   const Interval = setInterval(() => {
-      getPosts();         
-   }, 10000);
-   return () => clearInterval(Interval);
-   }, []);
 
    return (
       <>
          <div className="MainContent">
 
-            <div className="MainPosts">
-            {posts.map((post) => (
-               <Card key={post.id} title={post.titulo} content={post.conteudo} author={post.autor} />
-            ))}
+            <div className="MainPage">
+               <img src="./porsche-movimento.jpg" alt="" />
+               <h1>Sinta a potência, viva a velocidade.</h1>
+               <h3>Porsche 911</h3>
             </div>
 
-            <aside>
-               {/* Twitter component feed */}
-            </aside>
-
+         <div className="Carrosel">
+            <h1>Catalogo</h1>
+            <Card nome='Mercedes AMG GT' imagem='./MercedesAMG-GT.jpg' />
+            <Card nome='Ferrari F40' imagem='./ferrariF40.jpg' />
+         </div>
          </div>
       </>
    )

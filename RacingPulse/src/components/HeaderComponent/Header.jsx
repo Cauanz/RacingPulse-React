@@ -4,16 +4,16 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Avatar from '@mui/material/Avatar';
-import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+/* import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import ButtonGroup from '@mui/material/ButtonGroup';
+import ButtonGroup from '@mui/material/ButtonGroup'; */
 import ListItemIcon from '@mui/material/ListItemIcon';
 import Tooltip from '@mui/material/Tooltip';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import Divider from '@mui/material/Divider';
 import Settings from '@mui/icons-material/Settings';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
+/* import MoreVertIcon from '@mui/icons-material/MoreVert'; */
 import Logout from '@mui/icons-material/Logout';
 
 import { NavLink, useNavigate } from 'react-router-dom';
@@ -76,13 +76,13 @@ function Header() {
                   </Button>
                </div>
 
-               <div className='CreateButton'>
+{/*                <div className='CreateButton'>
                   <NavLink to="/CreatePost">
                      <Button disableRipple>
                         Criar
                      </Button>
                   </NavLink>
-               </div>
+               </div> */}
 
 
                <div className="AvatarContainer">

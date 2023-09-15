@@ -1,20 +1,20 @@
+/* eslint-disable react/prop-types */
 import './Card.css'
 
 
-function Card({ title, content, author}) {
+function Card( props ) {
 
    return (
-      <div className="card">
-         <div className="card-header">
-            <h2>{title}</h2>
+      <a href="#" className='cardLink'>
+         <div className="card">
+            <div className="cardBody">
+                  <img src={props.imagem} alt={props.nome} />
+                  <div className="overlay">
+                     <p className='text'>{props.nome}</p>
+                  </div>
+            </div>
          </div>
-         <div className="card-body">
-            <p>{content}</p>
-         </div>
-         <div className="card-footer">
-            <p>{author}</p>
-         </div>
-      </div>
+      </a>
    )
 }
 

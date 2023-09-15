@@ -1,7 +1,59 @@
 
 .card {
-   width: 700px;
-   height: 400px;
-   margin: 20px;
+   width: 400px;
+   height: 300px;
    background-color: #fff;
+   border: none;
+}
+
+.cardBody {
+   position: relative;
+   width: 100%;
+   height: 300px;
+   overflow: hidden;
+   padding: 0;
+}
+
+.card img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transition: transform 0.3s ease;
+}
+
+.overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para o texto */
+   display: flex;
+   align-items: flex-end;
+   justify-content: flex-start;
+   opacity: 0; /* Comece com opacidade 0 para esconder o texto */
+   transition: opacity 0.3s ease; /* Transição suave para a opacidade do texto */
+}
+
+.cardBody:hover .image {
+   transform: scale(1.1); /* Aumentar a escala da imagem em hover */
+}
+
+.cardBody:hover .overlay {
+   opacity: 1; /* Mostrar o texto em hover */
+}
+
+.text {
+   color: white;
+   font-size: 18px;
+   text-align: center;
+   margin-left: 10px;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 700;
+}
+
+.cardLink {
+   width: 400px;
+   height: 300px;
+   margin: 20px;
 }
