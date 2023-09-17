@@ -5,16 +5,16 @@ import './Card.css'
 function Card( props ) {
 
    return (
-      <a href="#" className='cardLink'>
-         <div className="card">
+      <>
+         <a href="#" className='cardLink'>
             <div className="cardBody">
                   <img src={props.imagem} alt={props.nome} />
                   <div className="overlay">
                      <p className='text'>{props.nome}</p>
                   </div>
             </div>
-         </div>
-      </a>
+         </a>
+      </>
    )
 }
 

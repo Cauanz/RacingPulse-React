@@ -1,22 +1,25 @@
 
-.card {
-   width: 400px;
-   height: 300px;
+
+.cardLink {
+   display: inline-block;
+/*    width: 400px;
+   height: 300px; */
+   margin: 20px;
    background-color: #fff;
    border: none;
 }
 
 .cardBody {
    position: relative;
-   width: 100%;
-   height: 300px;
+/*    width: 100%;
+   height: 300px; */
    overflow: hidden;
    padding: 0;
 }
 
-.card img {
-   width: 100%;
-   height: 100%;
+.cardLink img {
+   max-width: 100%;
+   min-height: 200px;
    object-fit: cover;
    transition: transform 0.3s ease;
 }
@@ -50,10 +53,4 @@
    margin-left: 10px;
    font-family: 'Montserrat', sans-serif;
    font-weight: 700;
-}
-
-.cardLink {
-   width: 400px;
-   height: 300px;
-   margin: 20px;
 }
