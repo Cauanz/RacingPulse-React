@@ -1,0 +1,157 @@
+[
+   {
+     "nome": "Toyota Supra MK5",
+     "imagem": "../../public/supra mk5.jpg",
+     "marca": "Toyota",
+     "modelo": "Supra MK5",
+     "ano": 2022,
+     "preco": "$50,000",
+     "descricao": "O Toyota Supra MK5 é um esportivo espetacular com um motor potente e um design aerodinâmico."
+   },
+   {
+     "nome": "Dodge Charger RT",
+     "imagem": "../../public/DODGE CHARGER R T.jpg",
+     "marca": "Dodge",
+     "modelo": "Charger RT",
+     "ano": 2021,
+     "preco": "$45,000",
+     "descricao": "O Dodge Charger RT é um muscle car clássico com um motor V8 poderoso e estilo icônico."
+   },
+   {
+     "nome": "Ferrari F40",
+     "imagem": "../../public/ferrariF40.jpg",
+     "marca": "Ferrari",
+     "modelo": "F40",
+     "ano": 1992,
+     "preco": "$1,500,000",
+     "descricao": "O Ferrari F40 é um dos supercarros mais icônicos já produzidos, com velocidade e elegância incomparáveis."
+   },
+   {
+     "nome": "Nissan GTR 2020 Nismo",
+     "imagem": "../../public/NISSAN GTR 2020 NISMO.jpg",
+     "marca": "Nissan",
+     "modelo": "GTR 2020 Nismo",
+     "ano": 2020,
+     "preco": "$210,000",
+     "descricao": "O Nissan GTR 2020 Nismo é um carro esportivo de alto desempenho com tecnologia avançada e uma aparência marcante."
+   },
+   {
+     "nome": "Mercedes AMG GT",
+     "imagem": "../../public/MercedesAMG-GT.jpg",
+     "marca": "Mercedes",
+     "modelo": "AMG GT",
+     "ano": 2021,
+     "preco": "$140,000",
+     "descricao": "O Mercedes AMG GT é um carro de luxo e alto desempenho com um interior elegante e um motor poderoso."
+   },
+   {
+      "nome": "Chevrolet Camaro SS",
+      "imagem": "./ChevroletCamaroSS.jpg",
+      "marca": "Chevrolet",
+      "modelo": "Camaro SS",
+      "ano": 2021,
+      "preco": "$55,000",
+      "descricao": "O Chevrolet Camaro SS é um muscle car americano conhecido por seu visual ousado e desempenho impressionante.",
+      "cor": "Vermelho"
+    },
+    {
+      "nome": "Audi R8 V10",
+      "imagem": "./AudiR8V10.jpg",
+      "marca": "Audi",
+      "modelo": "R8 V10",
+      "ano": 2022,
+      "preco": "$170,000",
+      "descricao": "O Audi R8 V10 é um supercarro alemão que combina design elegante com desempenho de classe mundial.",
+      "cor": "Cinza"
+    },
+    {
+      "nome": "Porsche 911 GT3",
+      "imagem": "./Porsche911GT3.jpg",
+      "marca": "Porsche",
+      "modelo": "911 GT3",
+      "ano": 2021,
+      "preco": "$180,000",
+      "descricao": "O Porsche 911 GT3 é um carro esportivo de alto desempenho conhecido por sua precisão e potência.",
+      "cor": "Branco"
+    },
+    {
+      "nome": "Lamborghini Huracán",
+      "imagem": "./LamborghiniHuracan.jpg",
+      "marca": "Lamborghini",
+      "modelo": "Huracán",
+      "ano": 2022,
+      "preco": "$250,000",
+      "descricao": "O Lamborghini Huracán é um supercarro italiano que combina estilo ousado com desempenho incrível.",
+      "cor": "Amarelo"
+    },
+    {
+      "nome": "Ford Mustang Shelby GT500",
+      "imagem": "./FordMustangShelbyGT500.jpg",
+      "marca": "Ford",
+      "modelo": "Mustang Shelby GT500",
+      "ano": 2021,
+      "preco": "$70,000",
+      "descricao": "O Ford Mustang Shelby GT500 é um muscle car americano com um motor supercharged de alta potência.",
+      "cor": "Azul"
+    },
+    {
+      "nome": "BMW M4",
+      "imagem": "./BMWM4.jpg",
+      "marca": "BMW",
+      "modelo": "M4",
+      "ano": 2022,
+      "preco": "$80,000",
+      "descricao": "O BMW M4 é um carro esportivo alemão que oferece desempenho de classe mundial e tecnologia avançada.",
+      "cor": "Preto"
+    },
+    {
+      "nome": "McLaren 720S",
+      "imagem": "./McLaren720S.jpg",
+      "marca": "McLaren",
+      "modelo": "720S",
+      "ano": 2021,
+      "preco": "$300,000",
+      "descricao": "O McLaren 720S é um supercarro britânico com um design futurista e um motor turbocharged poderoso.",
+      "cor": "Laranja"
+    },
+    {
+      "nome": "Jaguar F-Type",
+      "imagem": "./JaguarFType.jpg",
+      "marca": "Jaguar",
+      "modelo": "F-Type",
+      "ano": 2022,
+      "preco": "$90,000",
+      "descricao": "O Jaguar F-Type é um carro esportivo britânico com um design elegante e um som de escape empolgante.",
+      "cor": "Vermelho"
+    },
+    {
+      "nome": "Aston Martin Vantage",
+      "imagem": "./AstonMartinVantage.jpg",
+      "marca": "Aston Martin",
+      "modelo": "Vantage",
+      "ano": 2021,
+      "preco": "$140,000",
+      "descricao": "O Aston Martin Vantage é um carro esportivo britânico com um visual distinto e desempenho emocionante.",
+      "cor": "Verde"
+    },
+    {
+      "nome": "Tesla Model S Plaid",
+      "imagem": "./TeslaModelSPlaid.jpg",
+      "marca": "Tesla",
+      "modelo": "Model S Plaid",
+      "ano": 2021,
+      "preco": "$130,000",
+      "descricao": "O Tesla Model S Plaid é um sedã elétrico de alto desempenho com aceleração impressionante e tecnologia avançada.",
+      "cor": "Cinza"
+    },
+    {
+      "nome": "Porsche Taycan",
+      "imagem": "./PorscheTaycan.jpg",
+      "marca": "Porsche",
+      "modelo": "Taycan",
+      "ano": 2022,
+      "preco": "$100,000",
+      "descricao": "O Porsche Taycan é um sedan elétrico esportivo com design sofisticado e desempenho emocionante.",
+      "cor": "Branco"
+    }
+ ]

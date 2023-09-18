@@ -8,6 +8,7 @@ import './MainNews.css'
 import Card from '../components/CardPostComponent/Card';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import CarsData from '../assets/CarsData.json';
 
 function MainNews() {
 
@@ -78,15 +79,10 @@ function MainNews() {
             slidesToSlide={1}
             swipeable
             >
-               <Card nome='Mercedes AMG GT' imagem='./MercedesAMG-GT.jpg' />
-               
-               <Card nome='Ferrari F40' imagem='./ferrariF40.jpg' />
-
-               <Card nome='DODGE Charger R/T' imagem='./DODGE CHARGER R T.jpg' />
-
-               <Card nome='Nissan GTR 2020 NISMO' imagem='./NISSAN GTR 2020 NISMO.jpg' />
-
-               <Card nome='Toyota Supra MK5' imagem='./supra mk5.jpg' />
+               {CarsData.map((car, index) => (
+                     <Card key={index} nome={car.nome} imagem={car.imagem} />
+                  )
+               )}
             </Carousel>
          </div>
 
@@ -147,17 +143,15 @@ function MainNews() {
             slidesToSlide={1}
             swipeable
             >
-               <Card nome='Mercedes AMG GT' imagem='./MercedesAMG-GT.jpg' />
-               {/*
-               <Card nome='Ferrari F40' imagem='./ferrariF40.jpg' />
-
-               <Card nome='DODGE Charger R/T' imagem='./DODGE CHARGER R T.jpg' />
-
-               <Card nome='Nissan GTR 2020 NISMO' imagem='./NISSAN GTR 2020 NISMO.jpg' />
-
-               <Card nome='Toyota Supra MK5' imagem='./supra mk5.jpg' /> */}
+               <Card nome='Mercedes AMG GT' imagem='./Mercedes Benz.png' />
+               <Card nome='Mercedes AMG GT' imagem='./Dodge.png' />
+               <Card nome='Mercedes AMG GT' imagem='./Ferrari.png' />
+               <Card nome='Mercedes AMG GT' imagem='./Nissan.png' />
+               <Card nome='Mercedes AMG GT' imagem='./Porsche.png' />
+               <Card nome='Mercedes AMG GT' imagem='./Toyota.png' />
             </Carousel>
          </div>
+
 
 
          <div className="footer">
@@ -168,7 +162,7 @@ function MainNews() {
                <li><a href="#">Política de privacidade</a></li>
             </ul>
             <p>Uma plataforma para os amantes de carros.</p>
-            <p>© 2021 Racing Pulse</p>
+            <p>© 2023 Racing Pulse</p>
          </div>
          </div>
       </>
