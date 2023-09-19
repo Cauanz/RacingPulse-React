@@ -46,7 +46,7 @@
    },
    {
       "nome": "Chevrolet Camaro SS",
-      "imagem": "./ChevroletCamaroSS.jpg",
+      "imagem": "./Camaro ss.jpg",
       "marca": "Chevrolet",
       "modelo": "Camaro SS",
       "ano": 2021,
@@ -56,7 +56,7 @@
     },
     {
       "nome": "Audi R8 V10",
-      "imagem": "./AudiR8V10.jpg",
+      "imagem": "./Audi R8.jpg",
       "marca": "Audi",
       "modelo": "R8 V10",
       "ano": 2022,
@@ -66,7 +66,7 @@
     },
     {
       "nome": "Porsche 911 GT3",
-      "imagem": "./Porsche911GT3.jpg",
+      "imagem": "./Porsche 911 GT3.jpg",
       "marca": "Porsche",
       "modelo": "911 GT3",
       "ano": 2021,
@@ -76,7 +76,7 @@
     },
     {
       "nome": "Lamborghini Huracán",
-      "imagem": "./LamborghiniHuracan.jpg",
+      "imagem": "./lamborghini huracan.jpg",
       "marca": "Lamborghini",
       "modelo": "Huracán",
       "ano": 2022,
@@ -86,7 +86,7 @@
     },
     {
       "nome": "Ford Mustang Shelby GT500",
-      "imagem": "./FordMustangShelbyGT500.jpg",
+      "imagem": "./Ford mustangshelbyGT500.jpg",
       "marca": "Ford",
       "modelo": "Mustang Shelby GT500",
       "ano": 2021,
@@ -96,7 +96,7 @@
     },
     {
       "nome": "BMW M4",
-      "imagem": "./BMWM4.jpg",
+      "imagem": "./BMW M4.jpg",
       "marca": "BMW",
       "modelo": "M4",
       "ano": 2022,
@@ -106,7 +106,7 @@
     },
     {
       "nome": "McLaren 720S",
-      "imagem": "./McLaren720S.jpg",
+      "imagem": "./Mclaren 720s.jpg",
       "marca": "McLaren",
       "modelo": "720S",
       "ano": 2021,
@@ -116,7 +116,7 @@
     },
     {
       "nome": "Jaguar F-Type",
-      "imagem": "./JaguarFType.jpg",
+      "imagem": "./Jaguar type f.jpg",
       "marca": "Jaguar",
       "modelo": "F-Type",
       "ano": 2022,
@@ -126,7 +126,7 @@
     },
     {
       "nome": "Aston Martin Vantage",
-      "imagem": "./AstonMartinVantage.jpg",
+      "imagem": "./Aston Martin Vantage.jpg",
       "marca": "Aston Martin",
       "modelo": "Vantage",
       "ano": 2021,
@@ -136,7 +136,7 @@
     },
     {
       "nome": "Tesla Model S Plaid",
-      "imagem": "./TeslaModelSPlaid.jpg",
+      "imagem": "./Tesla model s.jpg",
       "marca": "Tesla",
       "modelo": "Model S Plaid",
       "ano": 2021,
@@ -146,7 +146,7 @@
     },
     {
       "nome": "Porsche Taycan",
-      "imagem": "./PorscheTaycan.jpg",
+      "imagem": "./Porsche Taycan.jpg",
       "marca": "Porsche",
       "modelo": "Taycan",
       "ano": 2022,

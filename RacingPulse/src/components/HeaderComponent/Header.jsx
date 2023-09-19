@@ -72,7 +72,7 @@ function Header() {
 
                <div className='signatureButton'>
                   <Button disableRipple disableFocusRipple>
-                     Assinar
+                     Adicionar
                   </Button>
                </div>
 

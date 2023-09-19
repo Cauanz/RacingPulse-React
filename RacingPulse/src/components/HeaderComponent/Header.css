@@ -65,13 +65,13 @@
 }
 
 .NavMenu .MuiButton-root:hover {
-   background-color: #FF4500;
+   background-color: #f30303;
    color: #fff;
 }
 
 .signatureButton, .CreateButton {
    margin-left: 20px;
-   width: 110px;
+   width: auto;
    display: flex;
    justify-content: center;
    align-items: center;
