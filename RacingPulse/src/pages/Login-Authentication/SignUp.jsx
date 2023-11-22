@@ -13,8 +13,6 @@ import { NavLink, useNavigate } from 'react-router-dom'
 
 import './SignUp.css'
 import { useState } from 'react';
-import { auth , googleProvider} from "../../components/auth/firebase";
-import { createUserWithEmailAndPassword, signInWithPopup, updateProfile, getAuth } from "firebase/auth";
 
 
    const theme = createTheme({
@@ -31,7 +29,7 @@ import { createUserWithEmailAndPassword, signInWithPopup, updateProfile, getAuth
    const [email, setEmail] = useState('');
    const [password, setPassword] = useState('');
 
-   const handleSubmit = async (event) => {
+/*    const handleSubmit = async (event) => {
       event.preventDefault();
 
          const auth = getAuth();
@@ -45,9 +43,9 @@ import { createUserWithEmailAndPassword, signInWithPopup, updateProfile, getAuth
                console.log(error.message);
             });
             
-      /* console.log(firstName, lastName, email, password ); */ 
+      /* console.log(firstName, lastName, email, password );
       // Para testar se os dados estão sendo enviados corretamente
-   };
+   }; */
 
 
    return (
@@ -70,7 +68,7 @@ import { createUserWithEmailAndPassword, signInWithPopup, updateProfile, getAuth
                Sign up
             </Typography>
 
-            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+            <Box component="form" noValidate /* onSubmit={handleSubmit} */ sx={{ mt: 3 }}>
                <Grid container spacing={2}>
                <Grid item xs={12}>
                   <TextField

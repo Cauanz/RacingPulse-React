@@ -1,7 +1,5 @@
 
 import 'bootstrap/dist/css/bootstrap.css';
-/* import { collection, getDocs } from "firebase/firestore"; // Firestore
-import { db } from '../components/auth/firebase'; // Firestore */
 
 import './MainNews.css'
 /* import { useEffect, useState } from 'react'; */
@@ -153,6 +151,11 @@ function MainNews() {
          </div>
 
 
+
+         <div className="Posts">
+            <h1>Posts</h1>
+            
+         </div>
 
          <div className="footer">
             <ul>

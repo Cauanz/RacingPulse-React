@@ -18,7 +18,6 @@ import Logout from '@mui/icons-material/Logout';
 
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { getAuth, signOut } from "firebase/auth";
 
 function Header() {
 
@@ -34,7 +33,7 @@ function Header() {
       setAnchorEl(null);
    };
 
-   const logOut = async () => {
+/*    const logOut = async () => {
       const auth = getAuth();
       try {
       await signOut(auth)
@@ -49,7 +48,7 @@ function Header() {
 
    const handleLogout = () => {
       logOut();
-   };
+   }; */
 
     return (
         <div className="header">
@@ -76,13 +75,13 @@ function Header() {
                   </Button>
                </div>
 
-{/*                <div className='CreateButton'>
+               <div className='CreateButton'>
                   <NavLink to="/CreatePost">
                      <Button disableRipple>
                         Criar
                      </Button>
                   </NavLink>
-               </div> */}
+               </div>
 
 
                <div className="AvatarContainer">
@@ -147,7 +146,7 @@ function Header() {
                            </ListItemIcon>
                            Settings
                         </MenuItem>
-                        <MenuItem onClick={handleLogout}>
+                        <MenuItem /* onClick={handleLogout} */>
                            <ListItemIcon>
                               <Logout fontSize="small" />
                            </ListItemIcon>

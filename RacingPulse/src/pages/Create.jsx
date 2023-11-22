@@ -2,84 +2,78 @@ import { useState } from 'react';
 import './Create.css';
 import Header from '../components/HeaderComponent/Header';
 import TextField from '@mui/material/TextField';
-import { db } from '../components/auth/firebase';
-import { collection, addDoc } from "firebase/firestore";
+import Button from '@mui/material/Button';
+import axios from 'axios'
+
 
 
 function Create() {
+   const [conteudo, setConteudo] = useState('');
+   const [titulo, setTitulo] = useState('');
+   const [autor, setAutor] = useState('');
 
-   const [postagem, setPostagem] = useState({
-      titulo: '',
-      conteudo: '',
-      autor: '',
-      tags: [],
-   });
+/*    console.log(conteudo, titulo, autor) */ // Para DEBUG
 
-   const handleInputChange = (e, campo) => {
-      const { value } = e.target;
-      setPostagem({ ...postagem, [campo]: value });
-   };
 
    const handleSubmit = async (e) => {
       e.preventDefault();
-      try {
-         const docRef = await addDoc(collection(db, "postagens"), {
-            titulo: postagem.titulo,
-            conteudo: postagem.conteudo,
-            autor: postagem.autor,
-            tags: postagem.tags,
-         });
 
-         setPostagem({
-            titulo: "",
-            conteudo: "",
-            autor: "",
-            tags: [],
-         });
-
-         console.log("Documento adicionado com a ID: ", docRef.id);
-      } catch (e) {
-         console.error("Error adding document: ", e);
+      const postagem = {
+         titulo,
+         conteudo,
+         autor
       }
+
+
+      /* Código do MONGODB para enviar os dados */
+
+      // eslint-disable-next-line no-undef
+      axios.post('http://localhost:3002/api/CreatePost', postagem)
+         .then((res) => {
+            console.log(res.status);
+            console.log(res.data); 
+         }).catch (err => {
+            console.log('ocorreu um erro', err)
+         })
    };
 
-
-   /* Draft.js */
 
 return (
    <>
       <Header />
       <div className="CreateContainer">
-         <form onSubmit={handleSubmit}>
-            <label htmlFor="titulo">Título:</label>
-            <TextField
-            required
-            id="outlined-required"
-            value={postagem.titulo}
-            onChange={(e) => handleInputChange(e, 'titulo')}
-            />
-   
-            <label htmlFor="conteudo">Conteúdo:</label>
-            <TextField
-               required
-               id="outlined-multiline"
-               value={postagem.conteudo}
-               onChange={(e) => handleInputChange(e, 'conteudo')}
-               multiline
-               rows={5}
-            />
-   
-            <label htmlFor="autor">Autor:</label>
-            <TextField
-            required
-            id="outlined-required"
-            value={postagem.autor}
-            onChange={(e) => handleInputChange(e, 'autor')}
-            />
-   
-            <button type="submit">Enviar</button>
-         </form>
-      </div>
+      <form onSubmit={handleSubmit}>
+      <label htmlFor="titulo">Título:</label>
+
+      <TextField
+         required
+         id="outline-required"
+         value={titulo}
+         onChange={(e) => { setTitulo(e.target.value)}}
+         />
+
+      <label htmlFor="conteudo">Conteúdo:</label>
+
+      
+      <TextField
+         required
+         id="outline-required"
+         value={conteudo}
+         onChange={(e) => { setConteudo(e.target.value)}}
+         />
+
+
+      <label htmlFor="autor">Autor:</label>
+      <TextField
+         required
+         id="outlined-required"
+         value={autor}
+         onChange={(e) => { setAutor(e.target.value)}}
+      />
+
+      <Button variant="contained" color="primary" type="submit">Enviar</Button>
+      </form>
+   </div>
    </>
    );
 }

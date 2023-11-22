@@ -12,8 +12,6 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles'; // Para customizar o tema do Material UI
 
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth"; // Autenticação com email e senha do Firebase
-
 
 import { NavLink, useNavigate } from 'react-router-dom' // Para navegar entre as páginas com React Router Dom
 import './LogIn.css'
@@ -31,7 +29,7 @@ import { useState } from 'react';
    export default function LogIn() {
 
    const navigate = useNavigate();
-   const [email, setEmail] = useState('');
+/*    const [email, setEmail] = useState('');
    const [password, setPassword] = useState('');
    const [remember, setRemember] = useState(false);
 
@@ -72,7 +70,7 @@ import { useState } from 'react';
 
          error.code === 'auth/user-not-found' ? setWrongEmail(true) : error.code === 'auth/invalid-email' ? setWrongEmail(true) : setWrongEmail(false);
       });
-   };
+   }; */
 
    return (
    <>
@@ -96,37 +94,37 @@ import { useState } from 'react';
                Sign in
             </Typography>
 
-            <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+            <Box component="form" /* onSubmit={handleSubmit} */ noValidate sx={{ mt: 1 }}>
                <TextField
                margin="normal"
                required
-               error={wrongEmail || emptyEmail}
-               helperText={wrongEmail ? 'Email incorreto' : emptyEmail ? 'Campo obrigatório' : ''}
+/*                error={wrongEmail || emptyEmail}
+               helperText={wrongEmail ? 'Email incorreto' : emptyEmail ? 'Campo obrigatório' : ''} */
                fullWidth
                id="email"
                label="Endereço de Email"
                name="email"
                autoComplete="email"
                autoFocus
-               onChange={(e) => setEmail(e.target.value)}
+/*                onChange={(e) => setEmail(e.target.value)} */
                />
 
                <TextField
                margin="normal"
                required
-               error={wrongPassword || emptyPassword}
-               helperText={wrongPassword ? 'Senha incorreta' : emptyPassword ? 'Campo obrigatório' : ''}
+/*                error={wrongPassword || emptyPassword}
+               helperText={wrongPassword ? 'Senha incorreta' : emptyPassword ? 'Campo obrigatório' : ''} */
                fullWidth
                name="password"
                label="Senha"
                type="password"
                id="password"
                autoComplete="current-password"
-               onChange={(e) => setPassword(e.target.value)}
+/*                onChange={(e) => setPassword(e.target.value)} */
                />
 
                <FormControlLabel
-               control={<Checkbox value="remember" checked={remember} onChange={() => setRemember(!remember)} color="primary" />}
+               control={<Checkbox value="remember" /* checked={remember} onChange={() => setRemember(!remember)} */ color="primary" />}
                label="Lembre-me"
                />
 
@@ -136,7 +134,7 @@ import { useState } from 'react';
                disableRipple
                variant="contained"
                sx={{ mt: 3, mb: 2, height: '50px' }}
-               onClick={handleSubmit}
+/*                onClick={handleSubmit} */
                on
                >
                Entrar
