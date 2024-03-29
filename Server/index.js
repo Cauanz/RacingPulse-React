@@ -28,7 +28,7 @@ mongoose.connect(`mongodb+srv://${DB_USER}:${DB_PASSWORD}@cluster0.px29j1j.mongo
    })
 
 
-app.use('/api', PostRoute)
+app.use('/', PostRoute)
 
 app.get('/getText', (req, res) => {
    res.status(200).json({message: 'Estou aqui, funciona!'})

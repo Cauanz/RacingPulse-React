@@ -28,4 +28,18 @@ router.post('/CreatePost', async (req, res) => {
    }
 })
 
+
+//Recuperar posts
+router.get('/GetPost', async (req, res) => {
+   
+   try {
+      const posts = await Postagem.find()
+
+      res.status(200).json(posts)
+   } catch (err){
+      res.status(500).json({ error: `Ocorreu um erro ao tentar exibir todos os usuarios: ${err}`})
+   }
+})
+
+
 module.exports = router

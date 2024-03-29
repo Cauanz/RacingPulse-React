@@ -7,9 +7,32 @@ import Card from '../components/CardPostComponent/Card';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import CarsData from '../assets/CarsData.json';
+import { PostsComponent } from '../components/PostsComponent/PostsComponent';
+
+
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 function MainNews() {
+   const [posts, setPosts] = useState([]);
 
+   useEffect(() => {
+
+      const GetPosts = () => {
+         axios.get('http://localhost:3002/GetPost')
+            .then((response) => {
+               setPosts(response.data)
+            })
+            .catch((err) => {
+               console.error(`Ocorreu um erro ao tentar exibir todos os usuarios: ${err}`);
+            })
+      };
+
+
+      GetPosts()
+   }, [])
+
+   console.log(posts)
 
    return (
       <>
@@ -154,7 +177,14 @@ function MainNews() {
 
          <div className="Posts">
             <h1>Posts</h1>
-            
+            {posts.map((post, index) => (
+               <PostsComponent 
+                  key={index}
+                  titulo={post.titulo}
+                  conteudo={post.conteudo}
+                  autor={post.autor}
+               />
+            ))}
          </div>
 
          <div className="footer">
